@@ -1,0 +1,91 @@
+.user-powerful {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .power {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 30px 0;
+
+    .power-text {
+      width: 775px;
+      margin: 0 30px;
+
+      h1 {
+        font-family: "Calibri", sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+
+      }
+
+      p {
+        font-family: "Calibri", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(132, 144, 164, 1);
+        margin: 20px 0;
+
+        span {
+          color: rgba(73, 220, 255, 1);
+        }
+      }
+
+      h2 {
+        font-family: Calibri;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(195, 206, 225, 1);
+        width: 454px;
+      }
+
+      h3 {
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(195, 206, 225, 1);
+      }
+    }
+
+
+    img {
+      margin: 0 20px;
+    }
+
+    .power-img {
+      width: 550px;
+      height: 450px;
+    }
+
+    .power-img1 {
+      width: 500px;
+      height: 250px;
+    }
+
+    .power-img2 {
+      width: 500px;
+      height: 370px;
+    }
+  }
+
+  .active {
+    opacity: 0.5;
+  }
+
+}

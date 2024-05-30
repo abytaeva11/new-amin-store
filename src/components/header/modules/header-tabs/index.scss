@@ -1,0 +1,43 @@
+.header-tabs {
+   width: 100%;
+  height: 70px;
+  background: rgba(28, 35, 46, 1);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  .header-tabs-inside {
+    margin: auto 0;
+    display: flex;
+    gap: 275px;
+    margin-left: 110px;
+     width: 90% ;
+
+    .header-tabs-inside-block1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      // width: 60%;
+      gap: 20px;
+      h3{
+        //font-family: Georgia;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(73, 220, 255, 1);
+        width: 171px;
+
+      }
+    }
+
+    .header-tabs-inside-block2 {
+      // width: 50px;
+      color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+  }
+}

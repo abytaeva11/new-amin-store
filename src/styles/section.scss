@@ -1,0 +1,111 @@
+.section1 {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  
+    .section1-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      h2 {
+        color: rgba(132, 144, 164, 1);
+        font-size: 21px;
+      }
+  
+      span {
+        color: white;
+      }
+    }
+  
+    .section1-text {
+      padding: 40px 0;
+      width: 729px;
+      align-items: center;
+      justify-content: center;
+  
+      h3 {
+        font-family: Georgia;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 72px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+      }
+  
+      h4 {
+        font-family: Georgia;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: rgba(254, 255, 255, 1);
+      }
+    }
+  }
+  
+  .section2-global {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 240px;
+    padding: 0 40px;
+    background: rgba(28, 35, 46, 1);
+    margin: 50px 100px;
+  
+    .section2-block-first {
+  
+  
+      h6 {
+        font-family: Georgia;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        padding: 20px 0 40px 0;
+      }
+  
+      .section2-block {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+  
+        .section2-first {
+          span {
+            color: rgba(73, 220, 255, 1);
+          }
+  
+          h5 {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: rgba(195, 206, 225, 1);
+            width: 201px;
+  
+          }
+  
+        }
+      }
+    }
+  
+    hr {
+      height: 80px;
+      color: gray;
+      margin: 0 10px;
+    }
+  
+    .section2-img {
+    }
+  
+  }
+  

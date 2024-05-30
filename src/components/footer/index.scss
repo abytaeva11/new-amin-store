@@ -1,0 +1,145 @@
+.footer {
+  width: 100%;
+  background: rgba(33, 41, 54, 1);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+
+.footer-tabs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  
+  .footer-tabs-inside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+
+    .footer-tabs-right {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 20%;
+
+      .footer-tabs-top-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+          width: 23px;
+          height: 23px;
+          background:rgba(255, 255, 255, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;          margin: 3px ;
+          border-radius: 5px;
+        }
+
+      }
+
+      .block-first {
+        h3 {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(73, 220, 255, 1);
+          margin: 10px 0;
+
+        }
+
+        h4 {
+          //font-family: Inter;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(95, 105, 122, 1);
+        }
+
+        h5 {
+          //font-family: Inter;
+          font-size: 15px;
+          margin: 10px 0;
+          font-weight: 400;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(73, 220, 255, 1);
+        }
+
+        .days {
+          font-family: Inter;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(95, 105, 122, 1);
+        }
+      }
+
+    }
+
+    .footer-tabs-left {
+      align-items: flex-start;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+
+      h2 {
+        font-family: Calibri;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(95, 105, 122, 1);
+
+      }
+
+      .footer-tabs-block {
+        align-items: flex-start;
+        justify-content: space-between;
+        display: flex;
+        width: 100%;
+
+        .block-second {
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          display: flex;
+
+          a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+            h4 {
+              //font-family: Inter;
+              font-size: 12px;
+              font-weight: 400;
+              letter-spacing: 0em;
+              text-align: left;
+              color: rgba(255, 255, 255, 1);
+            }
+
+            span {
+              color: rgba(95, 105, 122, 1);
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+}
