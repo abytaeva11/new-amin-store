@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { FaTools } from "react-icons/fa";
 import {
     Icon10Power,
@@ -12,12 +12,21 @@ import {
 } from "src/icons";
 import { IoClose } from "react-icons/io5";
 import "src/styles/info-block.scss"
+import {useGetAllComputersQuery} from "src/store";
 
 
 
 export const Inexpensive2Module: React.FC = () => {
-
+const [inexpensiv, setInexpensiv] = useState([])
     const [modalActive, setModalActive] = useState<boolean>(false);
+  const {data} = useGetAllComputersQuery({})
+    useEffect(() => {
+        const filtered: any[] = data ? data?.filter((item: any) => item.price < "10000") : []
+        console.log("Filtered", filtered)
+        // @ts-ignore
+        setInexpensiv(filtered)
+    }, [data])
+
     const handleAddToCart = (product: ProductType) => {
         setModalActive(true);
     };

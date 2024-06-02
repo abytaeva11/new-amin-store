@@ -15,10 +15,15 @@ import {
 } from 'src/icons';
 import { KomputerBack } from 'src/datas';
 import "./index.scss";
+import {useGetAllProductsQuery} from "src/store";
 
 export const Section6Module = () => {
   const backend = KomputerBack[0]
   const backend2 = KomputerBack[1]
+  const { data } = useGetAllProductsQuery({})
+
+  console.log("Client >>>>>>" ,data)
+
   return (
     <section >
       <div id="section6">
