@@ -4,8 +4,6 @@ import { GoTriangleDown } from 'react-icons/go';
 import { IconProduct } from "src/icons";
 import { basketBack } from 'src/datas';
 import "./index.scss";
-// @ts-ignore
-import img from "../../../../public/img/amin-logo.png"
 
 export const BasketPage = () => {
 
@@ -19,8 +17,30 @@ export const BasketPage = () => {
           "                          игровыми приложениями, показывая достаточно\n" +
           "                          высоким показатели FPS. Прекрасный помощник в учебе для школьника.",
       price: 54000,
-      img:" "
+      img: "/img/amin-logo.png",
     },
+     {
+         id:2,
+         title: "HUNTER ",
+         text1: " HUNTER - недорогой компьютер для\n" +
+             "                       игр. Прекрасно справляется с CS:GO, Dota 2,\n" +
+             "                         ortnite, Minecraft и другим современными\n" +
+             "                          игровыми приложениями, показывая достаточно\n" +
+             "                          высоким показатели FPS. Прекрасный помощник в учебе для школьника.",
+         price: 54000,
+         img: "/img/amin-logo.png",
+     },
+     {
+         id:3,
+         title: "HUNTER ",
+         text1: " HUNTER - недорогой компьютер для\n" +
+             "                       игр. Прекрасно справляется с CS:GO, Dota 2,\n" +
+             "                         ortnite, Minecraft и другим современными\n" +
+             "                          игровыми приложениями, показывая достаточно\n" +
+             "                          высоким показатели FPS. Прекрасный помощник в учебе для школьника.",
+         price: 54000,
+         img: "/img/amin-logo.png",
+     },
    {
 
    }
@@ -106,57 +126,53 @@ export const BasketPage = () => {
         </div>
         <div className='large'>
 
-          {/*{*/}
-          {/*  basketInfo &&*/}
-          {/*  <>*/}
-          {/*    {*/}
-          {/*      isBasketVisible &&*/}
-          {/*      productsInCart.map(el => (*/}
-          {/*        <div key={el.id} className="basket3-block3">*/}
-          {/*          <div className='gros'>*/}
-          {/*            <img src={el.img} alt="" />*/}
-          {/*            <div className='gros-title'>*/}
-          {/*              <h1>{el.title}</h1>*/}
-          {/*              <p> HUNTER - недорогой компьютер для*/}
-          {/*             игр. Прекрасно справляется с CS:GO, Dota 2,*/}
-          {/*               ortnite, Minecraft и другим современными*/}
-          {/*                игровыми приложениями, показывая достаточно*/}
-          {/*                высоким показатели FPS. Прекрасный помощник в учебе для школьника.</p>*/}
-          {/*            </div>*/}
-          {/*          </div>*/}
+          {
+            basketInfo &&
+            <>
+              {
+                isBasketVisible &&
+                backend2.map(el => (
+                  <div key={el.id} className="basket3-block3">
+                    <div className='gros'>
+                      <img src={el.img} alt="" />
+                      <div className='gros-title'>
+                        <h1>{el.title}</h1>
+                        <p>{el.text1}</p>
+                      </div>
+                    </div>
 
-          {/*          <div className='gros-title2'>*/}
-          {/*            <div className='gros-plus'>*/}
-          {/*              <h1>*/}
-          {/*                <button>-</button>*/}
-          {/*                <span> | {quantity} |</span>*/}
-          {/*                <button>+</button>*/}
-          {/*              </h1>*/}
-          {/*              <button onClick={handleRemoveBasket}>x</button>*/}
-          {/*            </div>*/}
+                    <div className='gros-title2'>
+                      <div className='gros-plus'>
+                        <h1>
+                          <button>-</button>
+                          <span> | {quantity} |</span>
+                          <button>+</button>
+                        </h1>
+                        <button onClick={handleRemoveBasket}>x</button>
+                      </div>
 
-          {/*            <div className='grup1'>*/}
-          {/*              <div className='gros-btn'>*/}
-          {/*                <button>купить</button>*/}
-          {/*                <div className='btn-btn'>*/}
-          {/*                  <div className='btn22'>*/}
-          {/*                    <h2>{ }</h2>*/}
-          {/*                    <span>c</span>*/}
-          {/*                  </div>*/}
-          {/*                  <p>от 5 490 сом в месяц </p>*/}
-          {/*                </div>*/}
-          {/*              </div>*/}
+                      <div className='grup1'>
+                        <div className='gros-btn'>
+                          <button>купить</button>
+                          <div className='btn-btn'>
+                            <div className='btn22'>
+                              <h2>{ }</h2>
+                              <span>c</span>
+                            </div>
+                            <p>от 5 490 сом в месяц </p>
+                          </div>
+                        </div>
 
-          {/*              <button className='croup'>изменить конфигурацию</button>*/}
-          {/*              <button className='croup2'>изменить конфигурацию</button>*/}
-          {/*            </div>*/}
+                        <button className='croup'>изменить конфигурацию</button>
+                        <button className='croup2'>изменить конфигурацию</button>
+                      </div>
 
-          {/*          </div>*/}
-          {/*        </div>*/}
-          {/*      ))*/}
-          {/*    }*/}
-          {/*  </>*/}
-          {/*}*/}
+                    </div>
+                  </div>
+                ))
+              }
+            </>
+          }
 
           <div className='syzyk'></div>
           {
