@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Text } from "@mantine/core";
 import { useQuill } from "react-quilljs";
 import BlotFormatter from "quill-blot-formatter";
@@ -15,14 +15,14 @@ type Props = {
 };
 
 export const TextEditor = ({
-    label,
-    required,
-    onChange,
-    formData,
-    error,
-    labelButton,
-    style = { height: "200px" },
-}: Props) => {
+                               label,
+                               required,
+                               onChange,
+                               formData,
+                               error,
+                               labelButton,
+                               style = { height: "200px" },
+                           }: Props) => {
     const { quill, quillRef, Quill } = useQuill({
         modules: { blotFormatter: { image: { resize: {} } } },
     });
@@ -34,26 +34,31 @@ export const TextEditor = ({
         Quill.register("modules/blotFormatter", BlotFormatter);
     }
 
+    const handleTextChange = useCallback(() => {
+        if (quill) {
+            const editorHtml = quill.root.innerHTML;
+            onChange(editorHtml);
+        }
+    }, [quill, onChange]);
+
     useEffect(() => {
         if (quill) {
-            const handleTextChange = () => {
-                const editorHtml = quill.root.innerHTML;
-                onChange(editorHtml);
-            };
             quill.on("text-change", handleTextChange);
 
             if (formData && isInitialLoad) {
                 setIsInitialLoad(false);
                 editorContent.current = formData || null;
-                if (quill && editorContent.current) {
-                    const delta = quill.clipboard.convert(
-                        editorContent.current
-                    );
+                if (editorContent.current) {
+                    const delta = quill.clipboard.convert({ html: editorContent.current });
                     quill.setContents(delta);
                 }
             }
+
+            return () => {
+                quill.off("text-change", handleTextChange);
+            };
         }
-    }, [quill]);
+    }, [quill, handleTextChange, formData, isInitialLoad]);
 
     return (
         <>

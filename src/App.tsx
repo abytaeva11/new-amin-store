@@ -11,7 +11,7 @@ const renderRoutes = (route: RouteList) => {
 function App() {
 
     return (
-        <div>
+        <div className="body">
             <Routes>
                 {routes.map((it) => {
                     if (it.isPublic) {
