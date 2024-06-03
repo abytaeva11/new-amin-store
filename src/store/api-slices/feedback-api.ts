@@ -4,23 +4,11 @@ import { Path } from "src/utils";
 export const feedbackApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         createFeedback: builder.mutation<FeedbackType, FeedbackFormType>({
-            query: ({
-                img,
-                ...body
-            }) => {
-                const formData = new FormData();
-                const data = new Blob([JSON.stringify(body)], {
-                    type: "application/json",
-                });
-                formData.append("requestDto", data);
-                if (img) {
-                    formData.append("attachments", img)
-                }
-
+            query: ({...data}) => {
                 return {
                     url: Path.Feedback.create,
                     method: "POST",
-                    body: formData,
+                    body: data,
                 };
             },
         }),

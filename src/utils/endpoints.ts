@@ -28,7 +28,7 @@ export class Path {
         static getAll = baseApi("all-feedbacks-list/")
         static get = (id: string) => baseApi(`feedback/${id}/`);
         static delete = (id: number) => baseApi(`feedback/${id}/delete/`);
-        static create = baseApi(`feedback/`);
+        static create = baseApi(`feedback-create/`);
         // static search = baseApi(`feedback-list`);
     };
     static Delivery = class {

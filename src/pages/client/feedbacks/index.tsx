@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { FaRegStar } from "react-icons/fa";
 import './index.scss';
+import {useCreateFeedbackMutation} from "src/store";
+import {notify} from "src/utils";
 
 export const CreateFeedBackPage = () => {
     const [feedbackText, setFeedbackText] = useState('');
     const [selectedRating, setSelectedRating] = useState(0);
     const [name, setName] = useState('')
+    const [createFeedback] = useCreateFeedbackMutation()
 
     const handleStarClick = (clickedRating: number) => {
         if (clickedRating === selectedRating) {
@@ -15,10 +18,25 @@ export const CreateFeedBackPage = () => {
         }
     };
 
-    const handleSubmit = () => {
-        setFeedbackText('');
-        setSelectedRating(0);
-        setName('')
+    const handleSubmit = async () => {
+        const data: any = {
+            title: name,
+            stars: selectedRating,
+            description: feedbackText,
+            product: 1
+        }
+        try {
+            await createFeedback(data).unwrap()
+            notify(true, "Успешно");
+            setFeedbackText('');
+            setSelectedRating(0);
+            setName('')
+        } catch (e) {
+            setFeedbackText('');
+            setSelectedRating(0);
+            setName('')
+        }
+
     };
 
     return (
