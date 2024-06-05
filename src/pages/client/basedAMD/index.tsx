@@ -2,10 +2,22 @@ import { AiFillHome, AiFillStar } from 'react-icons/ai';
 import { AmdBackend } from 'src/datas';
 import "src/styles/section.scss"
 import "./index.scss";
+import {useEffect, useState} from "react";
+import {useGetAllComputersQuery} from "src/store";
 
 export const BasedAMDPage = () => {
   const backend = AmdBackend[0]
   const backend2 = AmdBackend[1]
+  const [computers, setComputers] = useState<any []>([])
+  const {data} = useGetAllComputersQuery({})
+
+  useEffect(() => {
+    const filtered: any [] = data?.filter((item) => item.videoCard.brand === "AMD") ?? []
+    setComputers(filtered)
+    console.log(computers)
+  }, [data])
+  // RENDER AMD COMPUTERS IN HERE
+
   return (
     <div className="based-amd">
       <div className="section1">

@@ -4,13 +4,23 @@ import { PowerfulBack } from 'src/datas';
 import "src/styles/info-block.scss"
 import "src/styles/section.scss"
 import "./index.scss";
+import {useEffect, useState} from "react";
+import {useGetAllComputersQuery} from "src/store";
 
 
 export const PowerfulPage = () => {
     const backend = PowerfulBack[0]
     const backend2 = PowerfulBack[1]
     const backend3 = PowerfulBack[2]
+    const [computers, setComputers] = useState<any []>([])
+    const {data} = useGetAllComputersQuery({})
 
+    useEffect(() => {
+        const filtered: any [] = data?.filter((item) => item.is_game === true && item.importance <= 15) ?? []
+        setComputers(filtered)
+    }, [data])
+
+    // RENDER COMPUTERS IN HERE
     return (
         <section className="user-powerful">
             <div className="section1">

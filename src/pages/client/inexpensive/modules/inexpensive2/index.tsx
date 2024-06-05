@@ -17,12 +17,12 @@ import {useGetAllComputersQuery} from "src/store";
 
 
 export const Inexpensive2Module: React.FC = () => {
-const [inexpensiv, setInexpensiv] = useState([])
+const [inexpensiv, setInexpensiv] = useState<any[]>([])
     const [modalActive, setModalActive] = useState<boolean>(false);
   const {data} = useGetAllComputersQuery({})
     useEffect(() => {
-        const filtered: any[] = data ? data?.filter((item: any) => item.price < "10000") : []
-        console.log("Filtered", filtered)
+        console.log(data)
+        const filtered: any[] = data?.filter((item: any) => +item?.price > 10000) ?? []
         // @ts-ignore
         setInexpensiv(filtered)
     }, [data])
@@ -30,6 +30,8 @@ const [inexpensiv, setInexpensiv] = useState([])
     const handleAddToCart = (product: ProductType) => {
         setModalActive(true);
     };
+
+// IN HERE RENDER INEXPENSIV COMPUTERS
 
     return (
         <div className="inexpensive-second">
