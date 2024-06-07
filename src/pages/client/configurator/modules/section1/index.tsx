@@ -7,7 +7,7 @@ export const Section1Module = () => {
     const backend2 = ConfigurationBack[1]
 
     return (
-        <div>
+        <div className="section-module">
             <div className="section1" style={{ background: `linear-gradient(to bottom, rgba(24, 23, 26, 0.5), rgba(24, 23, 26, 0.88), rgba(24, 23, 26, 1)), url("/img/footer-tabs-bg.jpg")` }}>            {/* <div className="container"> */}
                 <div className="section1-top ">
                     <span> <AiFillHome /> </span>
@@ -43,7 +43,6 @@ export const Section1Module = () => {
                     <img src={backend2.img} alt="" />
                 </div>
             </div>
-            {/* </div> */}
         </div>
 
     );

@@ -5,8 +5,9 @@ import "./index.scss"
 export const Footer = () => {
     return (
         <div className="footer">
-            <HeaderTabsModule />
-            <FooterTabsModule />
+            <div className="footer-tabs-modules"> <HeaderTabsModule /></div>
+            <div className="footer-tabs-modules"> <FooterTabsModule /></div>
+
         </div>
     );
 }
