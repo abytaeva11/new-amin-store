@@ -34,9 +34,15 @@ import {
     AddComputer,
     EditComputer,
 } from "src/pages";
+import MenuBurder from "src/components/header/modules/menu-burger/menu-burder";
 
 
 export const routes: RouteList[] = [
+    {
+        path:"/menu-tabs",
+        element:<MenuBurder/>,
+        isPublic:true
+    },
     {
         path: "/logo",
         element: <HomePage />,

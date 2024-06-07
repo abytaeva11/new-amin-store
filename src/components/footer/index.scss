@@ -5,6 +5,7 @@
   align-items: center !important;
   justify-content: center !important;
   flex-direction: column !important;
+
 }
 
 .footer-tabs {
@@ -12,7 +13,7 @@
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  
+
   .footer-tabs-inside {
     display: flex;
     align-items: flex-start;
@@ -141,5 +142,13 @@
       }
     }
 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 854px) {
+  .footer{
+    .footer-tabs-modules{
+display: none;
+    }
   }
 }
